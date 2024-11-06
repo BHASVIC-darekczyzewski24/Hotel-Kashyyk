@@ -1,0 +1,3 @@
+C:/Users/darek.czyzewski24/Documents/github/Hotel-Kashyyk/cmake-build-debug/CMakeFiles/Hotel_Kashyyk.dir
+C:/Users/darek.czyzewski24/Documents/github/Hotel-Kashyyk/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/darek.czyzewski24/Documents/github/Hotel-Kashyyk/cmake-build-debug/CMakeFiles/rebuild_cache.dir
