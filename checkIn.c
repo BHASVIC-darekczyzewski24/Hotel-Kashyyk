@@ -72,6 +72,12 @@ int main(void) {
     // booking a room
     // im going to do this later when i figure out text files
 
+// to be replaced with testingground.c
+
+
+
+
+
     // generating a BiD
     
 
