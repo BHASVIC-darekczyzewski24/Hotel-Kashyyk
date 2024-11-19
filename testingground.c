@@ -19,15 +19,39 @@ int main(void) {
         roomFilePointer = fopen("rooms.txt", "w");
         fputs("123456", roomFilePointer);
         printf("The list of rooms was not found. The program will now create a list of rooms. Please restart the program to avoid issues");
-        Sleep(3000);
+        Sleep(1000);
         abort();
     }
     fgets(availableRooms, 7, roomFilePointer);
-    availableRooms[7] = 0;
-    for(int counter = 0; counter < 6; counter++) {
-        printf("%c \n", availableRooms[counter]);
-    }
     fclose(roomFilePointer);
+    availableRooms[7] = 0;
+    printf("Our currently vacant rooms are: \n");
+    for(int counter = 0; counter < 6; counter++) {
+        if(availableRooms[counter] != 88) {
+            switch(availableRooms[counter]){
+                case 49:
+                    printf("%c : 100 per day.\n", availableRooms[counter]);
+                break;
+                case 50:
+                    printf("%c : 100 per day.\n",availableRooms[counter]);
+                break;
+                case 51:
+                    printf("%c : 85 per day.\n",availableRooms[counter]);
+                break;
+                case 52:
+                    printf("%c : 75 per day.\n",availableRooms[counter]);
+                break;
+                case 53:
+                    printf("%c : 75 per day.\n",availableRooms[counter]);
+                break;
+                case 54:
+                    printf("%c : 50 per day.\n",availableRooms[counter]);
+                break;
+                default:
+                    printf("Something has gone wrong.");
+            }
+        }
+    }
     scanf("%d", &desiredRoom);
     for(int counter = 0; counter < 6; counter++) {
         int placeholder = availableRooms[counter];
@@ -35,8 +59,8 @@ int main(void) {
             printf("Your booking of room %d was a success.", desiredRoom);
             availableRooms[counter] = 88;
             printf("\n %s", availableRooms);
-            fopen("rooms.txt", "w");
-                fputs(availableRooms, "rooms.txt");
+            FILE* temp = fopen("rooms.txt", "w");
+            fprintf(temp, availableRooms);
             break;
         }
 

@@ -46,8 +46,8 @@ int main(void) {
     printf("How many guests are staying, including you?");
     fflush(stdin);
     scanf("%d", &totalGuests);
-    if(totalGuests > 4) {
-        printf("You have too many guests with you. This booking will be cancelled and you will be returned to the main menu.");
+    if(totalGuests > 4 || totalGuests < 1) {
+        printf("You have too many guests with you or have input an invalid number. This booking will be cancelled and you will be returned to the main menu.");
         // add the subroutine to go back to the menu here, someone will code it later
     }
     printf("How many of those guests are adults?");
