@@ -4,4 +4,5 @@ project(Hotel_Kashyyk C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(Hotel_Kashyyk
-        testingground.c)
+        checkIn.c
+)

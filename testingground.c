@@ -14,14 +14,13 @@ int main(void) {
     setbuf(stdout, NULL);
     char availableRooms[7];
     int desiredRoom = 0;
-    FILE* roomFilePointer = fopen("rooms.txt", "r");
-    if (roomFilePointer == NULL) {
-        roomFilePointer = fopen("rooms.txt", "w");
-        fputs("123456", roomFilePointer);
-        printf("The list of rooms was not found. The program will now create a list of rooms. Please restart the program to avoid issues");
-        Sleep(1000);
-        abort();
+    FILE* roomFilePointer2 = fopen("rooms.txt", "r");
+    if (roomFilePointer2 == NULL) {
+        roomFilePointer2 = fopen("rooms.txt", "w");
+        fputs("123456", roomFilePointer2);
+        fclose(roomFilePointer2);
     }
+    FILE* roomFilePointer = fopen("rooms.txt", "r");
     fgets(availableRooms, 7, roomFilePointer);
     fclose(roomFilePointer);
     availableRooms[7] = 0;
